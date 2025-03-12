@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+}
+
+#inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/da7663a4-5f00-42b0-ae54-5da1b3d7ccdb.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#inicio .contenido header {
+    background-color: rgba(40, 243, 50, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+#inicio .contenido header .contenido-header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#inicio .contenido header .contenido-header h1 {
+    color: #000;
+}
+
+#inicio .contenido header .contenido-header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#inicio .contenido header .contenido-header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: 400;
+    transition: color 0.5s;
+}
+
+#inicio .contenido header .contenido-header nav ul li a:hover {
+    color: rgba(40, 243, 50, 0.8);
+}
+
+#inicio .contenido .Presentacion {
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+    color: rgba(40, 243, 50, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/background.jpg"); /* Cambia la ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease; /* Suaviza el cambio de fondo */
+}
+
+#inicio .contenido .Presentacion .bienvenida {
+    font-size: 20px; /* Aumenta el tamaño del texto */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto */
+}
+
+#inicio .contenido .Presentacion h2 {
+    font-size: 60px; /* Aumenta el tamaño del texto */
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto */
+}
+
+#inicio .contenido .Presentacion h2 span {
+    color: rgba(40, 243, 50, 1); /* Cambia el color a un verde más brillante */
+}
+
+#inicio .contenido .Presentacion .descripcion {
+    max-width: 700px;
+    margin: 25px auto;
+    font-size: 20px; /* Aumenta el tamaño del texto */
+    line-height: 1.5; /* Mejora la legibilidad */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
+}
+
+#inicio .contenido .Presentacion a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 25px;
+    padding: 15px 30px; /* Ajusta el padding para un botón más grande */
+    border: 2px solid rgba(40, 243, 50, 0.8);
+    border-radius: 50px;
+    color: #fff; /* Cambia el color del texto a blanco */
+    background-color: rgba(40, 243, 50, 0.8); /* Color de fondo del botón */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.5s, transform 0.3s; /* Añade transición para el hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Añade sombra al botón */
+}
+
+#inicio .contenido .Presentacion a:hover {
+    background-color: rgba(40, 243, 50, 1); /* Cambia el color de fondo al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de elevación al pasar el mouse */
+}
+
+#nav {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute; /* Posiciona el menú de forma absoluta */
+    background-color: rgba(40, 243, 50, 0.8); /* Fondo del menú */
+    top: 60px; /* Ajusta según la altura del header */
+    left: 0;
+    width: 100%; /* Ancho completo */
+    z-index: 100; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#icono-nav:hover + #nav {
+    display: block; /* Muestra el menú al pasar el mouse sobre el icono */
+}
+
+#nav:hover {
+    display: block; /* Mantiene el menú visible mientras el mouse está sobre él */
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+}
+
+#nav ul li {
+    margin: 0; /* Elimina el margen para que se vea bien */
+}
+
+#nav ul li a {
+    padding: 10px 20px; /* Espaciado para los enlaces */
+    display: block; /* Hace que el área clickeable sea más grande */
+    color: #000; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+#nav ul li a:hover {
+    background-color: rgba(0, 250, 62, 0.5); /* Color de fondo al pasar el mouse */
+}
+
+#sobre-nosotros {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 15px;
+    color: rgba(2, 71, 5, 0.8);
+    display: flex;
+    background-color: rgba(102, 100, 103, 0.3);
+}
+
+#sobre-nosotros .contenedor-fotos {
+    max-width: 400px;
+    margin-right: 80px;
+}
+
+#sobre-nosotros .contenedor-fotos img {
+    padding: 20px;
+    width: 100%; /* Cambiado para que se ajuste correctamente */
+    border-radius: 10px;
+}
+
+#sobre-nosotros .sobre-nosotros {
+    margin: 0 40px;
+}
+
+#sobre-nosotros .sobre-nosotros .titulo-seccion {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgb(64, 64, 64);
+    text-decoration: underline;
+    text-decoration-color: rgba(40, 243, 50, 0.8);
+}
+
+#sobre-nosotros .sobre-nosotros h2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#sobre-nosotros .sobre-nosotros h3 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#sobre-nosotros .sobre-nosotros p {
+    font-size: 20px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 12px;
+}
+
+#sobre-nosotros .sobre-nosotros a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(0, 4, 0, 0.8);
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    margin-top: 30px;
+    transition: background-color 0.5s;
+}
+
+#sobre-nosotros .sobre-nosotros a:hover {
+    background-color: rgba(0, 250, 62, 0.5);
+    color: rgb(0, 0, 0);
+}
+
+#servicios {
+    padding: 100px 15px;
+    text-align: center;
+    background-color: rgba(0, 97, 24, 0.97);
+}
+
+#servicios .titulo-seccion {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 5px;
+}
+
+#servicios .fila {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+#servicios .servicio i{
+    font-size: 40px;
+}
+
+#servicios .fila .servicio {
+    max-width: 700px;
+    background-color: rgb(109, 116, 116);
+    padding: 70px;
+    margin: 0 5px;
+    border-radius: 15px;
+    transition: box-shadow 0.1s;
+}
+
+#servicios .fila .servicio:hover {
+    box-shadow: 5px 5px 10px rgba(40, 243, 50, 0.8), -5px -5px 10px rgba(40, 243, 50, 0.8);
+}
+
+#servicios .fila .servicio h4 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+#servicios .fila .servicio .icono {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(172, 170, 173);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+#servicios .fila .servicio hr {
+    width: 80%;
+    margin: auto;
+    color: rgba(40, 243, 50, 0.8);
+    margin-bottom: 25px;
+}
+
+#servicios .fila .servicio ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#servicios .fila .servicio p {
+    font-size: 20px;
+    line-height: 22px;
+}
+
+
+#portafolio {
+    max-width: 1100px;
+    padding: 100px 0;
+    margin: auto;
+}
+
+#proyecto {
+    background-color: rgba(5, 167, 46, 0.97);
+}
+
+#proyecto .titulo-seccion {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 5px;
+    text-align: center;
+}
+
+#proyecto .fila {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+#proyecto .fila .proyecto {
+    max-width: 400px; /* Cambiado para un tamaño uniforme */
+    border: 1px solid rgba(27, 172, 63, 0.9);
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#proyecto .fila .proyecto img {
+    width: 100%;
+    height: 200px; /* Establecer una altura fija */
+    object-fit: cover; /* Mantener la proporción de la imagen */
+    filter: grayscale(1);
+    transition: filter 0.5s;
+}
+
+#proyecto .fila .proyecto:hover img {
+    filter: grayscale(0);
+}
+
+#proyecto .fila .proyecto .info {
+    position: absolute;
+    left: 0;
+    background-color: rgba(27, 172, 63, 0.9);
+    color: aquamarine;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    bottom: -40px;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+#proyecto .fila .proyecto:hover .info {
+    opacity: 1;
+    bottom: 0;
+}
+
+#testimonios {
+    padding: 100px 15px;
+    background-color: rgba(0, 97, 24, 0.97);
+}
+
+#testimonios .titulo-seccion {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.9);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.9);
+    text-decoration-thickness: 5px;
+}
+
+#testimonios .fila {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: auto;
+}
+
+#testimonios .testimonio {
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacto {
+    padding: 100px 15px;
+}
+
+#contacto .titulo-seccion {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.9);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.9);
+    text-decoration-thickness: 5px;
+}
+
+#contacto .contenedor-form {
+    max-width: 1100px;
+    margin: auto;
+}
+
+#contacto .contenedor-form .fila {
+    margin-bottom: 15px;
+}
+
+#contacto .contenedor-form .mitad {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contacto .contenedor-form input,
+#contacto .contenedor-form textarea {
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(11, 114, 0);
+}
+
+#contacto .contenedor-form .mitad input {
+    width: 47%;
+}
+
+#contacto .contenedor-form .input-full {
+    width: 100%;
+}
+
+#contacto .btn-enviar {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#contacto .btn-enviar:hover {
+    background-color: rgba(27, 172, 63, 0.9);
+    color: rgb(49, 122, 22);
+}
+
+footer {
+    background-color: rgba(27, 172, 63, 0.9);
+    color: rgb(44, 131, 64);
+    text-align: center;
+    padding: 80px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: bisque;
+    display: inline-block;
+    margin: 5px;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 800px) {
+    #redes {
+        display: none;
+    }
+    nav {
+        display: none; 
+    }
+    nav.responsive {
+        display: block;
+        background-color: rgb(80, 0, 134);
+        width: 100%;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        padding: 10px 0;
+    }
+    nav.responsive ul {
+        display: block; 
+        text-align: inherit;
+        padding: 0; 
+        list-style-type: none; 
+    }
+    nav.responsive ul li {
+        margin: 5px 0; 
+        display: block; 
+    }
+    #icono-nav {
+        display: block;
+        color: rgb(124, 13, 179);
+    }
+}
+
+.logo {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    vertical-align: middle; /* Alinea la imagen verticalmente con el texto */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
